@@ -12,7 +12,7 @@ public class CriarBanco {
 		Connection conexao = DriverManager.getConnection(url, user, password);
 		
 		Statement stmt = conexao.createStatement();
-		stmt.execute("CREATE DATABASE curso_java");
+		stmt.execute("CREATE DATABASE IF NOT EXISTS curso_java");
 		
 		conexao.close();
 	}
